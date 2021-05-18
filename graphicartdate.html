@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Inserting Normalize, so all the browser will look the same-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    
+    <!-- Inserting Google Fonts so it will affecting the css below -->
+    <!--playfair display-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+    <!--montserrat-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+    <!--css for the index home page-->
+    <link rel="stylesheet" href="css/portfolio.css">
+    
+    <!--add js for the dropdown menu-->
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <title>Tina Octaviani Portfolio</title>
+
+</head>
+
+<body>
+    <!--Repeat Header-->
+    <header>
+        <section class="wrapper">
+            <div class="nav">
+
+                <!-- menu button for mobile and tablet-->
+                <div class="menu">
+                    <svg id="navbar-button" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path id="Menu-2" data-name="Menu" d="M0,14V12H16v2ZM0,8V6H16V8ZM0,2V0H16V2Z" transform="translate(0 1)" fill="#414042"/>
+                        <rect id="Rectangle_1446" data-name="Rectangle 1446" width="12" height="12" transform="translate(0)" fill="none"/>
+                      </svg>
+                      
+                </div>
+
+                <ul class="navlink">
+                    <li>
+                        <a href="index.html">Work</a>
+                    </li>
+
+                    <li>
+                        <a href="profile.html">Profile</a>
+                    </li>
+
+                    <li>
+                        <div class="logo">
+                            <img src="images/Logo.png" alt="logo">
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="insight.html">Insight</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <hr>
+        </section>
+
+        <!-- move out from section, so the drowndown link width can spread from left to right-->
+        <div id="navDropDown">
+            <ul class="navlink">
+                <li>
+                    <a href="index.html">Work</a>
+                </li>
+
+                <li>
+                    <a href="profile.html">Profile</a>
+                </li>
+
+                <li>
+                    <a href="insight.html">Insight</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!--hero image, seperate per device so it will help when doing the grid in css-->
+        <section class="wrapper">                    
+            <div class="heroimagemobile">
+                <img src="images/graphic-artdate-cover.jpg" alt="artdatehero">
+            </div>
+
+            <div class="heroimagetablet">
+                <img src="images/graphic-artdate-header.jpg" alt="artdatehero">
+            </div>
+        </section>
+
+        <!--do not use wrapper so can spread out max width-->
+        <section>
+            <div class="heroimagedesktop">
+                <img src="images/graphic-artdate-header.jpg" alt="artdatehero">
+            </div>
+        </section>
+        
+        <section class="content">
+            <section class="wrapper">
+                <!--for mobile and tablet-->
+                <div class="titlemobiletablet">
+                    <h2>
+                        Art Date
+                    </h2>
+
+                    <p class="horizontalline">
+                        &HorizontalLine;
+                    </p>
+
+                    <h3>
+                        Graphic. Digital Calendar
+                    </h3>
+
+                    <hr class="hidedesktop">
+                </div>
+
+                <!--for desktop change the grid-->
+                <div class="titledesktop">
+                    <h2>
+                        Art Date
+                    </h2>
+
+                    <p class="horizontalline">
+                        &HorizontalLine;
+                    </p>
+
+                    <h3>
+                        Graphic. 
+                        Digital Calendar
+                    </h3>
+                </div>
+                
+            </section>
+        
+            <section class="wrapper text">
+                <h2>
+                    Traditional meet digital, 
+                    a mix media calendar.
+                </h2>
+
+                <h4 class="captiontext">
+                    Description &HorizontalLine;
+                </h4>
+
+                <p>
+                    It is always exciting to explore traditional and digital together. 2019 is ending soon, and 2020 is coming. Out with the old, in with the new. I was thinking of playing with brushes and ink to create some free flows. Since the task is to combine the old and the new,  I thought, “What would be the one thing people always look at?”. 
+                    The answer I came to were mobile phones and calendars. As a result, after cleaning up and adjustments to the free flow brush background, I combined it with the calendar layout, and my 12 months calendar is done and available to download.
+                </p>
+            </section>
+        </section>
+
+        <section class="wrapper">
+            <div class="imagegrid">
+                <div class="imageone">
+                    <img src="images/graphic-artdate-image1.jpg" alt="artdateimageone">
+                </div>
+
+                <div class="imagetwo">
+                    <img src="images/graphic-artdate-image2.JPG" alt="artdateimagetwo">
+                </div>
+
+                <div class="imagethree">
+                    <img src="images/graphic-artdate-image3.jpg" alt="artdateimagethree">
+                </div>
+            </div>
+        </section>
+
+        <section class="wrapper">
+            <hr>
+
+            <h6>
+                all work &HorizontalLine;
+            </h6>
+
+            <div class="workcategory">
+                <p class="graphic">
+                    <a href="graphicportfolio.html">Graphic</a>
+                </p>
+
+                <p class="print">
+                    <a href="printportfolio.html">Print</a>
+                </p>
+
+                <p class="website">
+                    <a href="webportfolio.html">Website</a>
+                </p>
+            </div>
+
+            <hr>
+        </section>
+    </main>
+    
+
+    <!--Repeat Footer-->
+    <footer>
+        <div class="footerwrapper">
+            <div class="site-footer">
+                <h5>
+                <!--HTML Entities to add the copyright symbol-->
+                &copy; Tina Octaviani
+                </h5>
+            </div>
+
+            <div class="socialmedialogo">
+                <a href="http://instagram.com/"> <img alt="instagram" src="images/instagramlogo.png"></a>
+                <a href="https://github.com/octa0004"> <img alt="github" src="images/githublogo.png"></a>
+                <a href="https://www.linkedin.com/in/tina-o-73145012a/"> <img alt="linkedin" src="images/linkedinlogo.png"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!--adding script to enable the drop down menu for the nav in the tablet and mobile-->
+    <script>
+        $(document).ready(function(){
+            $('#navbar-button').on('click', function (e) {
+                e.stopPropagation();
+                $('#navDropDown').slideDown("fast");
+            });
+
+            $('#navDropDown').on('click', function (e) {
+                e.stopPropagation();
+                $('#navDropDown').slideDown("fast");
+            });
+
+            $(document).on('click', function (e) {
+                if (e.target != $('#navDropDown')) {
+                    $('#navDropDown').slideUp("fast");
+                }
+            });
+        });
+        
+    </script>
+
+</body>
+</html>
