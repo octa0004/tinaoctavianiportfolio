@@ -1,0 +1,885 @@
+html {
+    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+/*set color library for easy use*/
+:root {
+   --grey:#403E46;
+   --red:#FF0035;
+   --brown: #D2AD90;
+}
+
+/*set wrapper as a container and make even space to left and right*/
+.wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.wrapper img{
+    width: 100%;
+    height: auto;
+}
+
+
+hr{
+    margin-bottom: 0px;
+}
+
+/* starting the navigation bar*/
+
+/*  Use combination of 2 typeface
+    h use font-family: 'Playfair Display', serif;
+    body, navigation and the rest use font-family: 'Montserrat', sans-serif;*/
+
+.nav a {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.navlink {
+    list-style-type: none;
+    display: inline;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav .navlink li{
+    display: none;
+}
+
+.nav .navlink li:nth-child(3){
+    display: block;
+}
+
+/*specific style for the dropdown menu*/
+#navDropDown {
+    display: none;
+    position: absolute;
+    min-width: 100%;
+    width: 375px;
+}
+
+#navDropDown li{
+    display: block;
+}
+
+#navDropDown .navlink li{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background-color: rgba(248, 243, 238, 0.9);
+    text-align: center;
+}
+
+#navDropDown .navlink li{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/*make the hamburger menu in the middle of the logo*/
+.nav{
+    height: 120px;
+    position: relative;
+    padding-top: 30px;
+}
+
+.menu svg{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.logo img{
+    display: block;
+    text-align: center;
+    max-width: 100%;
+    width: 128px;
+    height: 108px;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a,
+a:link {
+    text-decoration: none;
+    color: var(--grey);
+}
+
+a:hover,
+a:focus {
+    display: block;
+    text-decoration: none;
+    color: var(--brown);
+}
+
+a.current {
+    display: block;
+    text-decoration: none;
+    color: var(--red);
+}
+
+/*setting font type and size */
+h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    color: var(--grey);
+    margin-bottom: 5px;
+}
+
+h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: var(--grey);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h3{
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--brown);
+    margin-top: 0px;
+}
+
+h4{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--brown);
+    text-align: center;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/*hide the title for mobile */
+.portfoliotitle-desktop {
+    display: none;
+}
+
+.workcategory p{
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.horizontalline{
+    color: var(--brown);
+    margin-bottom: 0;
+}
+
+/*adding margin top specific for this so it will give space to top*/
+.graphicladies {
+    margin-top: 20px;
+}
+
+/*hide for mobile */
+.graphicladies-desktop,
+.graphicartdate-desktop,
+.graphicportraittablet,
+.graphicportrait-desktop,
+.graphictgl-desktop,
+.graphiczodiac-desktop,
+.graphicsimplyglow-desktop {
+    display: none;
+}
+
+.footerwrapper{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/*use align item to center and make it same with the copyright,
+margin-left auto to make sure it align with line on the right*/
+.socialmedialogo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+}
+
+/*use width to set the soze of the icon
+padding left for spacing each icon*/
+.socialmedialogo img{
+    border: 0;
+    width: 13px;
+    padding-left: 20px;
+}
+
+/*-----------------------------------------------------------
+    Tablet Style
+-----------------------------------*/
+@media only screen and (min-width: 768px){
+    /* repeat navigation bar, same menu direction with mobile*/
+
+    .wrapper{
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    /*setting font type and size */
+    h1{
+        font-family: 'Playfair Display', serif;
+        font-size: 49px;
+        color: var(--grey);
+        margin-bottom: 5px;
+    }
+
+    h2{
+        font-family: 'Playfair Display', serif;
+        font-size: 35px;
+        color: var(--grey);
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    h3{
+        font-family: 'Playfair Display', serif;
+        font-size: 25px;
+        color: var(--brown);
+        margin-top: 0px;
+    }
+
+    p{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+    }
+
+    h4{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        color: var(--red);
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+    }
+    
+    /*footer*/
+    h5 {
+        font-size: 14px;
+    }
+
+    .footerwrapper{
+        display: flex;
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    /**/
+
+    /*hide the title for tablet */
+    .portfoliotitle-desktop {
+        display: none;
+    }
+
+    /* change grid for the image in the work page*/
+    .graphics {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat( auto-fit, 48%);
+        grid-template-rows: auto;
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+   
+    .graphicladies{
+        width: 100%;
+        height: auto;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }    
+
+    .graphicartdate {
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    
+    /*hide for tablet*/
+    .graphicladies-desktop,
+    .graphicportraittablet,
+    .graphicportrait-desktop {
+        display: none;
+    }
+
+    /**/
+
+    .wrapper h6{
+        margin-bottom: 10px;
+    }
+    /*change work categoryto grid 3 column for tablet*/
+    .workcategory{
+        display: grid;
+        grid-gap: 2%;
+        grid-template-columns: 33% 30% 33%;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin-bottom: 10px;
+    }
+
+    .workcategory p.graphic{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .workcategory p.print{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .workcategory p.website{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+}
+
+/*-----------------------------------------------------------
+    Desktop Style
+-----------------------------------*/
+
+@media only screen and (min-width: 992px){
+    /* change menu direction*/
+
+    svg {
+        display: none;
+    } 
+
+    /*for the work and profile to display on the side using flex*/    
+    .navlink li:nth-child(-n+2){
+        display: flex;
+        font-size: 14px;
+        padding-right: 40px;
+    }
+
+    .navlink li:nth-child(n+2){
+        display: flex;
+        font-size: 14px;
+        padding-left: 40px;
+    }
+
+    .navlink li:nth-child(2){
+        padding-left: 0px;
+    }
+
+    .nav{
+        width: 100%;
+        margin: auto;
+        padding-top: 20px;
+    }
+
+   .navlink{
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
+   }
+
+   /*target specific li child to make menu work and profile align left*/
+   .li:nth-child(2){
+       margin-right: 150px;
+   }
+
+    /*target specific li child to make menu insight and contact align right*/
+   .li:nth-child(4){
+       margin-left: 150px;
+   }
+
+    .wrapper{
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    h1{
+        font-family: 'Playfair Display', serif;
+        font-size: 49px;
+        color: var(--grey);
+        margin-bottom: 5px;
+    }
+
+    h2{
+        font-family: 'Playfair Display', serif;
+        font-size: 35px;
+        color: white;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    h3{
+        font-family: 'Playfair Display', serif;
+        font-size: 25px;
+        color: var(--brown);
+        margin-top: 5px;
+        margin-bottom: 0px;
+    }
+
+    h4{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+    }
+    
+    /*footer*/
+    h5 {
+        font-size: 14px;
+    }
+
+    .footerwrapper{
+        display: flex;
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    /**/
+
+    /* it turn out if i want to do many style change, this will happen, 
+    putting display none list is long, and how important is the naming.
+    Designing and coding is so diffrent.*/
+
+    /* make title appear for desktop*/
+    .portfoliotitle-desktop {
+        display: block;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    /*hide all the h2,h3, and horizontal line for desktop -- desktop will change to hover*/
+    .graphicladies-mobile-tablet,
+    .graphicladies h2,
+    .graphicladies h3,
+
+    .graphicartdate h2,
+    .graphicartdate h3,
+    .graphicartdate .horizontalline,
+
+    .graphicportrait h2,
+    .graphicportraittablet h2,
+    .graphicportrait .horizontalline,
+    .graphicportraittablet .horizontalline,
+    .graphicportrait h3,
+    .graphicportraittablet h3,
+    
+    .graphictgl .horizontalline,
+    .graphictglmobile-tablet,
+
+    .graphiczodiacmobile-tablet,
+    .graphicsimplyglowmobile-tablet {
+        display: none;
+    }
+
+    /* start styling and chnage
+    tablet using 2 col, now desktop change to 3 col*/
+    .graphics {
+        display: grid;
+        grid-gap: 2%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-start: 1;
+        grid-row-end: 2;
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    
+    /* start OVERLAY section*/
+
+    /*graphicladies*/
+    .graphicladies-desktop {
+        display: block;
+    }
+    
+    .graphicladies{
+        position: relative; 
+    }   
+
+    .graphicladies img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .graphicladies .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height:100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: rgba( 64,62,70, 0.8);
+    }
+
+    .graphicladies:hover .overlay{
+        opacity: 0.8;
+    }
+
+    .graphicladies:hover .overlay h2,
+    .graphicladies:hover .overlay p,
+    .graphicladies:hover .overlay h3{
+        display:block;
+    }
+
+    .text{
+        color: white;
+        top: 25%;
+        left: 25%;
+        position: absolute;
+        transform: translate(-35%, -37.5%);
+        text-align: left;
+    }
+
+    /*overlay graphiartdate for desktop*/
+    .graphicartdate-desktop {
+        display: block;
+    }
+    
+    .graphicartdate{
+        position: relative; 
+    }   
+
+    .graphicartdate img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .graphicartdate .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height:100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: rgba( 64,62,70, 0.8);
+    }
+
+    .graphicartdate:hover .overlay{
+        opacity: 0.8;
+    }
+
+    .graphicartdate:hover .overlay h2,
+    .graphicartdate:hover .overlay p,
+    .graphicartdate:hover .overlay h3{
+        display:block;
+    }
+
+    .artdatetext{
+        color: white;
+        top: 25%;
+        left: 25%;
+        position: absolute;
+        transform: translate( -25%, -40%);
+        text-align: left;
+    }
+
+    .graphicportrait {
+        display: none;
+    }
+
+    .graphicportraittablet{
+        display: block;
+        margin-top: 20px; 
+        object-fit: cover;
+        width: 100%;
+    }   
+
+    /*overlay graphic portrait use position for desktop*/
+    .graphicportrait-desktop {
+        display: block;
+    }
+    
+    .graphicportrait{
+        position: relative; 
+    }   
+
+    .graphicportraittablet{
+        position: relative; 
+    }   
+
+    .graphicportraittablet a{
+        width: 100%;
+        height: 100%;
+    }   
+
+    .graphicportraittablet img{
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /*add trasition 0.3 for fade in overlay*/
+    .graphicportraittablet .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height:100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: rgba( 64,62,70, 0.8);
+    }
+
+    .graphicportraittablet:hover .overlay{
+        opacity: 0.8;
+    }
+
+    .graphicportraittablet:hover .overlay h2,
+    .graphicportraittablet:hover .overlay p,
+    .graphicportraittablet:hover .overlay h3{
+        display:block;
+    }
+
+    .portraittext{
+        color: white;
+        top: 25%;
+        left: 25%;
+        position: absolute;
+        transform: translate( -35%, -37.5%);
+        text-align: left;
+    }
+
+    /*overlay graphictgl for desktop*/
+    .graphictgl-desktop {
+        display: block;
+    }
+    
+    .graphictgl{
+        position: relative; 
+    }   
+
+    .graphictgl img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .graphictgl .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height:100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: rgba( 64,62,70, 0.8);
+    }
+
+    .graphictgl:hover .overlay{
+        opacity: 0.8;
+    }
+
+    .graphictgl:hover .overlay h2,
+    .graphictgl:hover .overlay p,
+    .graphictgl:hover .overlay h3{
+        display:block;
+    }
+
+    .tgltext{
+        color: white;
+        top: 25%;
+        left: 25%;
+        position: absolute;
+        transform: translate( -20%, -30%);
+        text-align: left;
+    }
+
+    /*overlay graphictgl for desktop*/
+    .graphiczodiac-desktop {
+        display: block;
+    }
+    
+    .graphiczodiac{
+        position: relative; 
+    }   
+
+    .graphiczodiac img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .graphiczodiac .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height:100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: rgba( 64,62,70, 0.8);
+    }
+
+    .graphiczodiac:hover .overlay{
+        opacity: 0.8;
+    }
+
+    .graphiczodiac:hover .overlay h2,
+    .graphiczodiac:hover .overlay p,
+    .graphiczodiac:hover .overlay h3{
+        display:block;
+    }
+
+    .zodiactext{
+        color: white;
+        top: 25%;
+        left: 25%;
+        position: absolute;
+        transform: translate( -40%, -40%);
+        text-align: left;
+    }
+
+    /**/
+    /*overlay graphictgl for desktop*/
+    .graphicsimplyglow-desktop {
+        display: block;
+    }
+    
+    .graphicsimplyglow{
+        position: relative; 
+    }   
+
+    .graphicsimplyglow img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .graphicsimplyglow .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height:100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: rgba( 64,62,70, 0.8);
+    }
+
+    .graphicsimplyglow:hover .overlay{
+        opacity: 0.8;
+    }
+
+    .graphicsimplyglow:hover .overlay h2,
+    .graphicsimplyglow:hover .overlay p,
+    .graphicsimplyglow:hover .overlay h3{
+        display:block;
+    }
+
+    .simplyglowtext{
+        color: white;
+        top: 25%;
+        left: 25%;
+        position: absolute;
+        transform: translate( -20%, -40%);
+        text-align: left;
+    }
+
+    .graphic a,
+    .print a,
+    .web a {
+        width: 100%;
+        height: 100%;
+    }
+
+    /*change the spacing between the workcategory*/
+    .workcategory{
+        display: grid;
+        grid-gap: 2%;
+        grid-template-columns: repeat(5,1fr);
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin-bottom: 10px;
+        justify-items: center;
+    }
+
+    .workcategory p.graphic{
+        grid-column-start:2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .workcategory p.print{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .workcategory p.website{
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    
+}

@@ -1,0 +1,566 @@
+html {
+    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+/*set color library for easy use*/
+:root {
+   --grey:#403E46;
+   --red:#FF0035;
+   --brown: #D2AD90;
+}
+
+/*set wrapper as a container and make even space to left and right*/
+.wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.wrapper img{
+    width: 100%;
+    height: auto;
+}
+
+hr{
+    margin-bottom: 0px;
+}
+
+/* starting the navigation bar*/
+
+/*  Use combination of 2 typeface
+    h use font-family: 'Playfair Display', serif;
+    body, navigation and the rest use font-family: 'Montserrat', sans-serif;*/
+
+.nav a {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.navlink {
+    list-style-type: none;
+    display: inline;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav .navlink li{
+    display: none;
+}
+
+.nav .navlink li:nth-child(3){
+    display: block;
+}
+
+/*specific style for the dropdown menu*/
+#navDropDown {
+    display: none;
+    position: absolute;
+    min-width: 100%;
+    width: 375px;
+}
+
+#navDropDown li{
+    display: block;
+}
+
+#navDropDown .navlink li{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background-color: rgba(248, 243, 238, 0.9);
+    text-align: center;
+}
+
+#navDropDown .navlink li{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*make the hamburger menu in the middle of the logo*/
+.nav{
+    height: 120px;
+    position: relative;
+    padding-top: 30px;
+}
+
+.menu svg{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.logo img{
+    display: block;
+    text-align: center;
+    max-width: 100%;
+    width: 128px;
+    height: 108px;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a,
+a:link {
+    text-decoration: none;
+    color: var(--grey);
+}
+
+a:hover,
+a:focus {
+    display: block;
+    text-decoration: none;
+    color: var(--brown);
+}
+
+a.current {
+    display: block;
+    text-decoration: none;
+    color: var(--red);
+}
+
+/*setting font type and size 
+make the specific fot this h1 in center*/
+h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    color: var(--grey);
+    margin-bottom: 5px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: var(--grey);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h3{
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--brown);
+    margin-top: 0px;
+}
+
+h4{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--grey);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/*footer mobile */
+.footerwrapper{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/*use align item to center and make it same with the copyright,
+margin-left auto to make sure it align with line on the right*/
+.socialmedialogo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+}
+
+/*use width to set the size of the icon
+padding left for spacing each icon*/
+.socialmedialogo img{
+    border: 0;
+    width: 13px;
+    padding-left: 20px;
+}
+
+/*custom style */
+
+.captiontext{
+    color: var(--red);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    line-height: 1.5;
+}
+
+/*this is the challenging spot where the space between "to" always weird,
+before i used span class to specified and margin, but it doesn't work when its moving to the other break point
+so, instead using the width, specified with px in grid template column and apply justify content center*/
+.profile h1{
+    display: inline-grid;
+    grid-gap: 2%;
+    grid-template-columns: 145px auto 68px;
+    justify-content: center;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-auto-flow: column;
+    align-items:flex-end;
+    width: 100%;
+    height: auto;
+}
+
+/*hide logo first*/
+.totabletlogo,
+.todesktoplogo {
+    display: none;
+}
+
+/*use min and max width for the container*/
+.tomobilelogo{
+    width: 100%;
+    min-width: 30px;
+    max-width: 121px;
+    height: auto;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+/*change text alignment*/
+.profiletext{
+    text-align: center;
+}
+ 
+.profiletext{
+    margin-bottom: 40px;
+}
+
+/*make 2 column grid for mobile*/
+.profilesection{
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: 48% 48%;
+    grid-row-start: 1;
+    grid-row-end: 2;   
+}
+
+/*-----------------------------------------------------------
+    Tablet Style
+-----------------------------------*/
+@media only screen and (min-width: 768px){
+    .wrapper{
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    /*setting font type and size */
+    h1{
+        font-family: 'Playfair Display', serif;
+        font-size: 49px;
+        color: var(--grey);
+        margin-bottom: 5px;
+    }
+
+    h2{
+        font-family: 'Playfair Display', serif;
+        font-size: 35px;
+        color: var(--grey);
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    h3{
+        font-family: 'Playfair Display', serif;
+        font-size: 25px;
+        color: var(--brown);
+        margin-top: 0px;
+    }
+
+    p{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+    }
+
+    h4{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        color: var(--red);
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+    } 
+
+    /*footer tablet and desktop*/
+     .footerwrapper{
+        display: flex;
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    /*start styling for tablet*/
+
+    .profile{
+        display:flex;
+        flex-direction:column;
+        align-items: center; 
+        justify-content: center
+    }
+
+    /*this is the challenging spot where the space between "to" always weird,
+    before i used width 70% and margin left and it doesn't work when its moving to the other break point
+    so, instead using the width, specified with px in grid template column*/
+    .profile h1{
+        grid-template-columns: 205px auto 90px;
+    }
+
+    /*add margin maintain spacing*/
+    .profiletext {
+        margin-bottom: 50px;
+    }
+
+    /*change grid*/
+    .storyprofilecaption{
+        display: grid;
+        grid-gap: 2%;
+        grid-template-columns: 23% 23% 23% 23%;
+        grid-template-rows: 75% 20%;
+    }
+
+    .profilestory{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2; 
+    }
+
+    .profilestory .captiontext{
+        margin-top: 0px;
+    }
+
+    .profilepicture{
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2; 
+    }
+
+    .profilepicture img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    /*make 4 column grid */
+    .profilesection{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3; 
+        display: grid;
+        grid-gap: 2%;
+        grid-template-columns: 23% 23% 23% 23%;
+    }
+
+}
+
+/*-----------------------------------------------------------
+    Desktop Style
+-----------------------------------*/
+
+@media only screen and (min-width: 992px){
+    /* change menu direction*/
+
+    svg {
+        display: none;
+    } 
+
+    /*for the work and profile to display on the side use flex*/    
+    .navlink li:nth-child(-n+2){
+        display: flex;
+        font-size: 14px;
+        padding-right: 40px;
+    }
+
+    .navlink li:nth-child(n+2){
+        display: flex;
+        font-size: 14px;
+        padding-left: 40px;  
+    }
+
+    .navlink li:nth-child(2){
+        padding-left: 0px;
+    }
+
+    .nav{
+        width: 100%;
+        margin: auto;
+        padding-top: 20px;
+    }
+
+   .navlink{
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
+   }
+
+   /*target specific li child to make menu work and profile align left*/
+   .li:nth-child(2){
+       margin-right: 150px;
+   }
+
+    /*target specific li child to make menu insight and contact align right*/
+   .li:nth-child(4){
+       margin-left: 150px;
+   }
+
+    .wrapper{
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 80px;
+    }
+
+    h1{
+        font-family: 'Playfair Display', serif;
+        font-size: 49px;
+        color: var(--grey);
+        margin-bottom: 5px;
+    }
+
+    h2{
+        font-family: 'Playfair Display', serif;
+        font-size: 35px;
+        color: white;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    h3{
+        font-family: 'Playfair Display', serif;
+        font-size: 25px;
+        color: var(--brown);
+        margin-top: 5px;
+        margin-bottom: 0px;
+    }
+
+    h4{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+    }
+    
+    /*footer*/
+    h5 {
+        font-size: 14px;
+    }
+
+    .footerwrapper{
+        display: flex;
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    /*start styling for desktop*/
+
+    .profile{
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    /*change h1*/
+    /* this isvery challenging as i try many times to make it responsive 
+    without giving weird spaces between the "to", it works specified with the px for the template columns*/
+    .profile h1{
+        display: grid;
+        grid-gap: 2%;
+        grid-template-columns: 205px auto 90px;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-auto-flow: column;
+        width: 60%;
+        height: auto;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    /* change grid */
+    .storyprofilecaption{
+        display: grid;
+        grid-gap: 15%;
+        grid-template-columns: 20% 10% 40%;
+    }
+
+    .profilepicture{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .profilestory{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2; 
+    }
+
+    .profilesection{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        display: grid;
+        grid-gap: 2%;
+        grid-template-rows: 23% 23% 23% 23%;
+        grid-template-columns: 100%;
+    }
+
+    .profilesection .mantra{
+        grid-row-start:1;
+        grid-row-end: 2;
+    }
+
+    .profilesection .fashion{
+        grid-row-start:2;
+        grid-row-end: 3; 
+    }
+
+    .profilesection .film{
+        grid-row-start:3;
+        grid-row-end: 4;
+    }
+
+    .profilesection .hobby{
+        grid-row-start:4;
+        grid-row-end: 5;
+    }
+
+}

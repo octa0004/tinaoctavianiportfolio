@@ -1,0 +1,1158 @@
+html {
+    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+/*set color library for easy use*/
+:root {
+   --grey:#403E46;
+   --red:#FF0035;
+   --brown: #D2AD90;
+}
+
+/*set wrapper as a container and make even space to left and right*/
+.wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.wrapper img{
+    width: 100%;
+    height: auto;
+}
+
+
+hr{
+    margin-bottom: 0px;
+}
+
+/* starting the navigation bar*/
+
+/*  Use combination of 2 typeface
+    h use font-family: 'Playfair Display', serif;
+    body, navigation and the rest use font-family: 'Montserrat', sans-serif;*/
+
+.nav a {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.navlink {
+    list-style-type: none;
+    display: inline;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav .navlink li{
+    display: none;
+}
+
+.nav .navlink li:nth-child(3){
+    display: block;
+}
+
+/*specific style for the dropdown menu*/
+#navDropDown {
+    display: none;
+    position: absolute;
+    min-width: 100%;
+    width: 375px;
+}
+
+#navDropDown li{
+    display: block;
+}
+
+#navDropDown .navlink li{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background-color: rgba(248, 243, 238, 0.9);
+    text-align: center;
+}
+
+#navDropDown .navlink li{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/*make the hamburger menu in the middle of the logo*/
+.nav{
+    height: 120px;
+    position: relative;
+    padding-top: 30px;
+}
+
+.menu svg{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.logo img{
+    display: block;
+    text-align: center;
+    max-width: 100%;
+    width: 128px;
+    height: 108px;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a,
+a:link {
+    text-decoration: none;
+    color: var(--grey);
+}
+
+a:hover,
+a:focus {
+    display: block;
+    text-decoration: none;
+    color: var(--brown);
+}
+
+a.current {
+    display: block;
+    text-decoration: none;
+    color: var(--red);
+}
+
+/*setting font type and size */
+h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    color: var(--grey);
+    margin-bottom: 5px;
+}
+
+h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: var(--grey);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h3{
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--brown);
+    margin-top: 0px;
+}
+
+h4{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.horizontalline{
+    color: var(--brown);
+    margin-bottom: 0;
+}
+
+/*adding margin top specifica for this so it will give space to top, 
+but not affecting the navigation in the mobile */
+.graphicladies {
+    margin-top: 20px;
+}
+
+/*hide for mobile */
+.graphicladies-desktop,
+.graphicartdate-desktop,
+.graphicportraittablet,
+.graphicportrait-desktop,
+.printorigin-desktop,
+.florarecipetext,
+.printnyahbakso-dekstop,
+.nyahbaksotext,
+.killerbtext,
+.printkillerb-dekstop,
+.webtulis-desktop,
+.websmoochytablet, 
+.websmoochy-desktop,
+.webcustomking-desktop {
+    display: none;
+}
+
+.footerwrapper{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/*use align item to center and make it same with the copyright,
+margin-left auto to make sure it align with line on the right*/
+.socialmedialogo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+}
+
+/*use width to set the soze of the icon
+padding left for spacing each icon*/
+.socialmedialogo img{
+    border: 0;
+    width: 13px;
+    padding-left: 20px;
+}
+
+/*-----------------------------------------------------------
+    Tablet Style
+-----------------------------------*/
+@media only screen and (min-width: 768px){
+    /* repeat navigation bar, same menu direction with mobile*/
+
+    .wrapper{
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    /*setting font type and size */
+    h1{
+        font-family: 'Playfair Display', serif;
+        font-size: 49px;
+        color: var(--grey);
+        margin-bottom: 5px;
+    }
+
+    h2{
+        font-family: 'Playfair Display', serif;
+        font-size: 35px;
+        color: var(--grey);
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    h3{
+        font-family: 'Playfair Display', serif;
+        font-size: 25px;
+        color: var(--brown);
+        margin-top: 0px;
+    }
+
+    p{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+    }
+
+    h4{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        color: var(--red);
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+    }
+    
+    /*footer*/
+    h5 {
+        font-size: 14px;
+    }
+
+    .footerwrapper{
+        display: flex;
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    /* change grid for the image in the work page*/
+    .graphic {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat( auto-fit, 48%);
+        grid-template-rows: auto;
+        width: 100%;
+        height: auto;
+        margin:auto;
+    }
+    
+    .graphicladies{
+        width: 100%;
+        height: auto;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }    
+
+    .graphicartdate {
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    
+    /*hide for tablet*/
+    .graphicladies-desktop,
+    .graphicportrait,
+    .graphicportrait-desktop,
+    .smoochytext {
+        display: none;
+    }
+
+    /*change the size and look for tablet, change to 1 coloumn*/
+    .graphicportraittablet{
+        display: grid;
+        width: 100%;
+        height: auto;
+        grid-column-start:1;
+        grid-column-end:3;
+        grid-row-start:2;
+        grid-row-end:3;
+    }
+
+    /* change grid for print image in the work page*/
+    .print {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat( auto-fit, 48%);
+        grid-template-rows: auto;
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+    
+    /* change grid for the web image in the work page*/
+    .web{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat( auto-fit, 48%);
+        grid-template-rows: auto;
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+    
+    .websmoochy{
+        grid-column-start:1;
+        grid-column-end:3;
+        grid-row-start:1;
+        grid-row-end:2;
+    }
+
+    .websmoochymobile,
+    .websmoochy-desktop {
+        display: none;
+    }
+
+    .websmoochytablet {
+        display: grid;
+        width: 100%;
+        height: auto;
+    }
+
+    .webtulis{
+        width: 100%;
+        height: auto;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }    
+
+    .webcustomking{
+        width: 100%;
+        height: auto;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+}
+
+/*-----------------------------------------------------------
+    Desktop Style
+-----------------------------------*/
+
+@media only screen and (min-width: 992px){
+    /* change menu direction*/
+
+    svg {
+        display: none;
+    } 
+
+    /*using flex to make nav, specific using nth child*/    
+    .navlink li:nth-child(-n+2){
+        display: flex;
+        font-size: 14px;
+        padding-right: 40px;
+    }
+
+    .navlink li:nth-child(n+2){
+        display: flex;
+        font-size: 14px;
+        padding-left: 40px;  
+    }
+
+    .navlink li:nth-child(2){
+        padding-left: 0px;
+    }
+
+    .nav{
+        width: 100%;
+        margin: auto;
+        padding-top: 20px;
+    }
+
+   .navlink{
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
+    }
+
+   /*target specific li child to make menu work and profile align left*/
+   .li:nth-child(2){
+       margin-right: 150px;
+    }
+
+    /*target specific li child to make menu insight and contact align right*/
+   .li:nth-child(4){
+       margin-left: 150px;
+    }
+
+    .wrapper{
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    h1{
+        font-family: 'Playfair Display', serif;
+        font-size: 49px;
+        color: var(--grey);
+        margin-bottom: 5px;
+    }
+
+    h2{
+        font-family: 'Playfair Display', serif;
+        font-size: 35px;
+        color: white;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    h3{
+        font-family: 'Playfair Display', serif;
+        font-size: 25px;
+        color: var(--brown);
+        margin-top: 5px;
+        margin-bottom: 0px;
+    }
+
+    h4{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+    }
+    
+    /*footer*/
+    h5 {
+        font-size: 14px;
+    }
+
+    .footerwrapper{
+        display: flex;
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    /*hide all the h2 and h3 for desktop -- desktop will change to hover*/
+    .graphicladies-mobile-tablet,
+    .graphicladies h2,
+    .graphicartdate h2,
+    .graphicportrait h2,
+    .graphicportraittablet h2,
+    .printorigin h2,
+    .printflorarecipe h2,
+    .printnyahbakso h2,
+    .printkillerb h2,
+    .websmoochy h2,
+    .websmoochytablet h2,
+    .webtulis h2,
+    .webcustomking h2,
+
+    .graphicladies h3,
+    .graphicartdate h3,
+    .graphicportrait h3,
+    .graphicportraittablet h3,
+    .printorigin h3,
+    .printflorarecipe h3,
+    .printnyahbakso h3,
+    .printkillerb h3,
+    .websmoochy h3,
+    .websmoochytablet h3,
+    .webtulis h3,
+    .webcustomking h3,
+
+    .printorigin-all .horizontalline,
+    .printflorarecipe-all .horizontalline,
+    .printnyahbakso-all .horizontalline,
+    .printkillerb-all .horizontalline,
+    .webtulis-all .horizontalline,
+    .websmoochy-all .horizontalline,
+    .webcustomking .horizontalline{
+        display:none;
+    }
+
+    /* make a fade in overlay for desktop*/
+
+    /*graphic section*/
+
+    /*overlay graphicladies*/
+    .graphicladies-desktop {
+        display: block;
+    }
+    
+    .graphicladies{
+        position: relative; 
+    }   
+
+    .graphicladies img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .graphicladies .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height:100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: rgba( 64,62,70, 0.8);
+    }
+
+    .graphicladies:hover .overlay{
+        opacity: 0.8;
+    }
+
+    .graphicladies:hover .overlay h2,
+    .graphicladies:hover .overlay p,
+    .graphicladies:hover .overlay h3{
+        display:block;
+    }
+
+    .text{
+        color: white;
+        top: 25%;
+        left: 25%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        text-align: left;
+    }
+
+    /*overlay graphiartdate*/
+    .graphicartdate-desktop {
+        display: block;
+    }
+    
+    .graphicartdate{
+        position: relative; 
+    }   
+
+    .graphicartdate img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .graphicartdate .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height:100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: rgba( 64,62,70, 0.8);
+    }
+
+    .graphicartdate:hover .overlay{
+        opacity: 0.8;
+    }
+
+    .graphicartdate:hover .overlay h2,
+    .graphicartdate:hover .overlay svg,
+    .graphicartdate:hover .overlay h3{
+        display:block;
+    }
+
+    .artdatetext{
+        color: white;
+        top: 25%;
+        left: 25%;
+        position: absolute;
+        transform: translate( -20%, -47%);
+        text-align: left;
+    }
+
+    /*overlay graphic portrait use position for desktop*/
+    .graphicportrait-desktop {
+        display: block;
+    }
+    
+    .graphicportrait{
+        position: relative; 
+    }   
+
+    .graphicportraittablet{
+        position: relative; 
+    }   
+
+    .graphicportrait img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    /*add trasition 0.3 for fade in overlay*/
+    .graphicportrait-desktop .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height:100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: rgba( 64,62,70, 0.8);
+    }
+
+    .graphicportrait-desktop:hover .overlay{
+        opacity: 0.8;
+    }
+
+    .graphicportrait-desktop:hover .overlay h2,
+    .graphicportrait-desktop:hover .overlay svg,
+    .graphicportrait-desktop:hover .overlay h3{
+        display:block;
+    }
+
+    .portraittext{
+        color: white;
+        top: 25%;
+        left: 25%;
+        position: absolute;
+        transform: translate( -50%, -50%);
+        text-align: left;
+    }
+
+    /*print section*/
+
+    /*overlay print origin for desktop*/
+    .printorigin-desktop {
+        display: block;
+    }
+    
+    .printorigin{
+        position: relative; 
+    }   
+
+    .printorigin img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .printorigin .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height:100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: rgba( 64,62,70, 0.8);
+    }
+
+    .printorigin:hover .overlay{
+        opacity: 0.8;
+    }
+
+    .printorigin:hover .overlay h2,
+    .printorigin:hover .overlay svg,
+    .printorigin:hover .overlay h3{
+        display:block;
+    }
+
+    .origintext{
+        color: white;
+        top: 25%;
+        left: 25%;
+        position: absolute;
+        transform: translate( -30%, -35%);
+        text-align: left;
+    }
+
+    /*overlay print florarecipe for desktop*/
+    .printflorarecipe-desktop {
+        display: block;
+    }
+    
+    .printflorarecipe{
+        position: relative; 
+    }   
+
+    .printflorarecipe img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .printflorarecipe .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height:100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: rgba( 64,62,70, 0.8);
+    }
+
+    .printflorarecipe:hover .overlay{
+        opacity: 0.8;
+    }
+
+    .printflorarecipe:hover .overlay h2,
+    .printflorarecipe:hover .overlay svg,
+    .printflorarecipe:hover .overlay h3{
+        display:block;
+    }
+
+    .florarecipetext{
+        color: white;
+        top: 25%;
+        left: 25%;
+        position: absolute;
+        transform: translate( -20%, -30%);
+        text-align: left;
+        display: block;
+    }
+
+    /*overlay print nyahbakso for desktop*/
+    .printnyahbakso-desktop {
+        display: block;
+    }
+    
+    .printnyahbakso{
+        position: relative; 
+    }   
+
+    .printnyahbakso img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .printnyahbakso .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height:100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: rgba( 64,62,70, 0.8);
+    }
+
+    .printnyahbakso:hover .overlay{
+        opacity: 0.8;
+    }
+
+    .printnyahbakso:hover .overlay h2,
+    .printnyahbakso:hover .overlay svg,
+    .printnyahbakso:hover .overlay h3{
+        display:block;
+    }
+
+    .nyahbaksotext{
+        color: white;
+        top: 25%;
+        left: 25%;
+        position: absolute;
+        transform: translate( -20%, -30%);
+        text-align: left;
+        display: block;
+    }
+
+    /*overlay print killerb for desktop*/
+    .printkillerb-desktop {
+        display: block;
+    }
+    
+    .printkillerb{
+        position: relative; 
+    }   
+
+    .printkillerb img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .printkillerb .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height:100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: rgba( 64,62,70, 0.8);
+    }
+
+    .printkillerb:hover .overlay{
+        opacity: 0.8;
+    }
+
+    .printkillerb:hover .overlay h2,
+    .printkillerb:hover .overlay svg,
+    .printkillerb:hover .overlay h3{
+        display:block;
+    }
+
+    .killerbtext{
+        color: white;
+        top: 25%;
+        left: 25%;
+        position: absolute;
+        transform: translate( -27%, -35%);
+        text-align: left;
+        display: block;
+    }
+
+    /*overlay web tulis for desktop*/
+    .webtulis-desktop {
+        display: block;
+    }
+    
+    .webtulis{
+        position: relative; 
+    }   
+
+    .webtulis img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .webtulis .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height:100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: rgba( 64,62,70, 0.8);
+    }
+
+    .webtulis:hover .overlay{
+        opacity: 0.8;
+    }
+
+    .webtulis:hover .overlay h2,
+    .webtulis:hover .overlay svg,
+    .webtulis:hover .overlay h3{
+        display:block;
+    }
+
+    .tulistext{
+        color: white;
+        top: 25%;
+        left: 25%;
+        position: absolute;
+        transform: translate( -20%, -30%);
+        text-align: left;
+    }
+
+    /*web section*/
+     /*overlay web smoochy for desktop*/
+    .websmoochy-desktop {
+        display: block;
+    }
+    
+    .websmoochy{
+        position: relative; 
+    }   
+
+    .websmoochy img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .websmoochy .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height:100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: rgba( 64,62,70, 0.8);
+    }
+
+    .websmoochy:hover .overlay{
+        opacity: 0.8;
+    }
+
+    .websmoochy:hover .overlay h2,
+    .websmoochy:hover .overlay svg,
+    .websmoochy:hover .overlay h3{
+        display:block;
+    }
+
+    .smoochytext{
+        display: block;
+        color: white;
+        top: 25%;
+        left: 25%;
+        position: absolute;
+        transform: translate(-30%, -30%);
+        text-align: left;
+    }
+
+    /*overlay web customking for desktop*/
+    .webcustomking-desktop {
+        display: block;
+    }
+    
+    .webcustomking{
+        position: relative; 
+    }   
+
+    .webcustomking img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .webcustomking .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height:100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: rgba( 64,62,70, 0.8);
+    }
+
+    .webcustomking :hover .overlay{
+        opacity: 0.8;
+    }
+
+    .webcustomking:hover .overlay h2,
+    .webcustomking:hover .overlay p,
+    .webcustomking:hover .overlay h3{
+        display:block;
+    }
+
+    .customkingtext{
+        color: white;
+        top: 25%;
+        left: 25%;
+        position: absolute;
+        transform: translate(-20%, -30%);
+        text-align: left;
+    }
+    
+
+    /*change grid for work page desktop - 12 grid base*/
+    .graphic {
+        display: grid;
+        grid-gap: 2%;
+        grid-template-columns: 38% 20% 38%;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-auto-flow: column;
+        width: 100%;
+        height: auto;
+    }
+    
+    .graphic a,
+    .print a,
+    .web a {
+        width: 100%;
+        height: 100%;
+    }
+
+    .graphicladies {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;  
+    }  
+
+    .graphicladies img{
+        object-fit: cover;
+        min-width: 0;
+        min-height: 100%;
+    }
+ 
+    .graphicartdate{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .graphicartdate img{
+        object-fit: cover;
+        min-width: 0;
+        min-height: 100%;
+    }
+
+    .graphicportraittablet{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .graphicportraittablet{
+        margin-top: 20px;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .graphicportraittablet img{
+        object-fit: cover;
+        min-width: 0;
+        min-height: 100%;
+    }
+
+    /*change grid for the print desktop section*/
+    .print {
+        display: grid;
+        grid-gap: 2%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-auto-flow: column;
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /*change grid for the web desktop section*/
+    .web {
+        display: grid;
+        grid-gap: 2%;
+        grid-template-columns: 23.5% 49% 23.5%;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-auto-flow: column;
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .webtulis { 
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;  
+    }  
+
+    .webtulis > img{
+        object-fit: cover;
+        min-width: 0;
+        min-height: 100%;
+    }
+
+    .websmoochy{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;  
+    }
+
+    .websmoochytablet > img{
+        object-fit: cover;
+        min-width: 0;
+        min-height: 100%;
+    }
+
+    .webcustomking {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .webcustomking  > img{
+        object-fit: cover;
+        min-width: 0;
+        min-height: 100%;
+    }
+    
+    
+}
